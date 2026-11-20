@@ -511,13 +511,17 @@
           <h3 class="text-xl font-extrabold text-navy-900 mb-2 leading-tight">${pkg.name}</h3>
           <p class="text-slate-600 text-xs sm:text-sm mb-6 leading-relaxed">${pkg.description}</p>
 
-          <div class="bg-slate-50 rounded-2xl p-4 mb-6 border border-slate-100">
-            <div class="flex items-baseline gap-2 mb-1">
-              <span class="text-3xl font-black text-navy-900">₹${pkg.price}</span>
-              <span class="text-sm text-slate-400 line-through">₹${pkg.originalPrice}</span>
-              <span class="text-xs font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-md">${pkg.discount}</span>
+          <div class="bg-teal-50/80 rounded-2xl p-4 mb-6 border border-teal-100 flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <span class="w-8 h-8 rounded-xl bg-teal-600 text-white flex items-center justify-center shrink-0">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              </span>
+              <div>
+                <span class="text-xs font-bold text-teal-900 block">Home Collection & Digital Report</span>
+                <span class="text-[11px] text-slate-500 font-medium">Free doorstep sample collection in Silvassa</span>
+              </div>
             </div>
-            <p class="text-xs text-slate-500 font-medium">Free doorstep collection + digital WhatsApp report</p>
+            <span class="text-xs font-bold text-teal-700 bg-white px-2.5 py-1 rounded-lg border border-teal-200 shrink-0">Available</span>
           </div>
 
           <div class="space-y-2 mb-6">
@@ -540,12 +544,12 @@
                   class="w-full py-3 bg-teal-600 hover:bg-teal-700 text-white rounded-xl font-bold text-sm transition text-center shadow-md shadow-teal-600/20">
             Book Package
           </button>
-          <a href="https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent('Hi Avexa Healthcare, I am interested in booking the ' + pkg.name + ' (₹' + pkg.price + ').')}" 
+          <a href="https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent('Hi Avexa Healthcare, I am interested in inquiring about the ' + pkg.name + ' package.')}" 
              target="_blank" 
              rel="noopener noreferrer" 
              class="w-full sm:w-auto px-4 py-3 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 rounded-xl font-bold text-sm transition flex items-center justify-center gap-2 border border-emerald-200">
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67Z"/></svg>
-            WhatsApp
+            Inquire
           </a>
         </div>
       </div>
