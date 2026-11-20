@@ -85,7 +85,7 @@
         <div class="hidden sm:flex items-center gap-3">
           <button type="button" data-open-modal="homeCollectionModal" class="px-5 py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs tracking-wide transition shadow-lg shadow-teal-600/25 flex items-center gap-2">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
-            <span>Book Home Collection</span>
+            <span>Book a Lab Test</span>
           </button>
         </div>
         <button type="button" id="mobileMenuBtn" class="lg:hidden p-2 rounded-xl text-slate-700 hover:text-teal-600 hover:bg-slate-100" aria-label="Toggle mobile menu">
@@ -116,7 +116,7 @@
     </div>
     <div class="space-y-3 pt-6 border-t border-slate-100">
       <button type="button" data-open-modal="homeCollectionModal" class="w-full py-3 rounded-xl bg-teal-600 text-white font-bold text-sm text-center shadow-md">
-        Book Home Collection
+        Book a Lab Test
       </button>
     </div>
   </div>
@@ -135,7 +135,7 @@
           Comprehensive Preventive Health Packages
         </h1>
         <p class="text-slate-300 max-w-2xl text-sm sm:text-base leading-relaxed">
-          Detect early warning signs of diabetes, heart risks, vitamin deficiencies, and organ dysfunction before symptoms occur. Comprehensive preventive health checkups with doorstep sample collection.
+          Detect early warning signs of diabetes, heart risks, vitamin deficiencies, and organ dysfunction before symptoms occur. Comprehensive preventive health checkups with same-day digital reporting.
         </p>
       </div>
     </section>
@@ -188,7 +188,7 @@
               <tr class="hover:bg-slate-50"><td class="p-4 font-semibold text-slate-900">Serum Electrolytes (Sodium, Potassium, Chloride)</td><td class="p-4 text-center text-slate-400">—</td><td class="p-4 text-center text-slate-400 bg-teal-50/50">—</td><td class="p-4 text-center text-teal-600 font-bold">✓ Included</td></tr>
               <tr class="hover:bg-slate-50"><td class="p-4 font-semibold text-slate-900">Digital 12-Lead Resting ECG</td><td class="p-4 text-center text-slate-400">—</td><td class="p-4 text-center text-teal-600 font-bold bg-teal-50/50">✓</td><td class="p-4 text-center text-teal-600 font-bold">✓</td></tr>
               <tr class="hover:bg-slate-50"><td class="p-4 font-semibold text-slate-900">Urine Routine &amp; Microscopic Examination</td><td class="p-4 text-center text-teal-600 font-bold">✓</td><td class="p-4 text-center text-teal-600 font-bold bg-teal-50/50">✓</td><td class="p-4 text-center text-teal-600 font-bold">✓</td></tr>
-              <tr class="hover:bg-slate-50"><td class="p-4 font-semibold text-slate-900">Free Home Sample Collection in Silvassa</td><td class="p-4 text-center text-teal-600 font-bold">✓</td><td class="p-4 text-center text-teal-600 font-bold bg-teal-50/50">✓</td><td class="p-4 text-center text-teal-600 font-bold">✓</td></tr>
+              <tr class="hover:bg-slate-50"><td class="p-4 font-semibold text-slate-900">Same-Day Digital WhatsApp Report</td><td class="p-4 text-center text-teal-600 font-bold">✓</td><td class="p-4 text-center text-teal-600 font-bold bg-teal-50/50">✓</td><td class="p-4 text-center text-teal-600 font-bold">✓</td></tr>
             </tbody>
             <tfoot>
               <tr class="bg-slate-100 font-bold">
@@ -215,8 +215,8 @@
     <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-2xl flex flex-col">
       <div class="bg-navy-900 text-white p-6 flex items-center justify-between">
         <div>
-          <span class="text-xs font-semibold text-teal-400 uppercase tracking-wider block">Doorstep Phlebotomy</span>
-          <h2 id="homeCollectionTitle" class="text-xl font-extrabold text-white">Book Home Sample Collection</h2>
+          <span class="text-xs font-semibold text-teal-400 uppercase tracking-wider block">Lab Appointment</span>
+          <h2 id="homeCollectionTitle" class="text-xl font-extrabold text-white">Book a Lab Test / Appointment</h2>
         </div>
         <button type="button" data-close-modal class="text-slate-400 hover:text-white p-2 rounded-xl">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
@@ -253,8 +253,8 @@
           </div>
         </div>
         <div>
-          <label for="hcAddress" class="block text-xs font-bold uppercase text-slate-700 mb-1">Complete Address / Landmark in Silvassa *</label>
-          <textarea id="hcAddress" name="address" required rows="2" placeholder="Building/Society, Landmark, Tokarkhada / Silvassa" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm"></textarea>
+          <label for="hcAddress" class="block text-xs font-bold uppercase text-slate-700 mb-1">City / Area or Doctor's Instructions (Optional)</label>
+          <textarea id="hcAddress" name="address" rows="2" placeholder="e.g. Tokarkhada, Silvassa / Mention any fasting queries" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm"></textarea>
         </div>
         <div class="pt-4 flex items-center justify-end gap-3 border-t border-slate-100">
           <button type="button" data-close-modal class="px-5 py-2.5 rounded-xl text-slate-600 hover:bg-slate-100 text-sm font-semibold">Cancel</button>
@@ -266,7 +266,7 @@
 
   <!-- Floating WhatsApp -->
   <div class="floating-actions no-print">
-    <a href="https://wa.me/919428172910?text=Hello%20Avexa%20Healthcare,%20I%20have%20an%20enquiry%20regarding%20health%20packages" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Direct WhatsApp Consultation">
+    <a href="https://wa.me/919428172910?text=Hello%20Avexa%20Healthcare,%20I%20have%20an%20enquiry%20regarding%20health%20packages" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Direct WhatsApp Support">
       <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67Z"/></svg>
     </a>
   </div>

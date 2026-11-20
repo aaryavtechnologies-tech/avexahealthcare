@@ -251,7 +251,7 @@ window.AVEXA_PACKAGES = [
     fasting: "10-12 Hours Fasting",
     tat: "24 Hours Complete Report",
     recommendedFor: "Executive health checkups, senior citizens & full preventive audit",
-    description: "Our most exhaustive full body screening covering vitamins, cardiac risk, thyroid, complete metabolic panel, electrolytes, and doctor consultation.",
+    description: "Our most exhaustive full body screening covering vitamins, cardiac risk, thyroid, complete metabolic panel, electrolytes, and certified pathologist reporting.",
     categories: [
       "Everything in Complete Wellness Package (65 Parameters)",
       "Vitamin D3 (25-OH Cholecalciferol)",

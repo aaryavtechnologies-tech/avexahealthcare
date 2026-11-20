@@ -210,7 +210,7 @@
   }
 
   /* --------------------------------------------------------------------------
-     Home Sample Collection Form
+     Diagnostic Appointment Form
      -------------------------------------------------------------------------- */
   function initHomeCollectionForm() {
     const form = document.getElementById('homeCollectionForm');
@@ -227,15 +227,15 @@
       const test = formData.get('testName') || 'General Diagnostic Checkup';
       const notes = formData.get('notes') || '';
 
-      if (!name || !phone || !address) {
-        showToast('Please provide patient name, contact number, and address in Silvassa.', 'error');
+      if (!name || !phone) {
+        showToast('Please provide patient name and contact number.', 'error');
         return;
       }
 
       const dialog = form.closest('dialog');
       if (dialog) dialog.close();
 
-      const message = `Hello Avexa Healthcare & Path Labs,\n\nI want to book a *Home Sample Collection* in Silvassa:\n- *Patient Name:* ${name}\n- *Phone:* ${phone}\n- *Address/Landmark:* ${address}\n- *Tests/Package:* ${test}\n- *Preferred Date:* ${date || 'Earliest available'}\n- *Time Slot:* ${timeSlot || 'Morning'}\n${notes ? '- *Special Note:* ' + notes : ''}\n\nPlease confirm my doorstep appointment.`;
+      const message = `Hello Avexa Healthcare & Path Labs,\n\nI want to book a *Lab Test / Appointment* in Silvassa:\n- *Patient Name:* ${name}\n- *Phone:* ${phone}\n- *Tests/Package:* ${test}\n- *Preferred Date:* ${date || 'Earliest available'}\n- *Time Slot:* ${timeSlot || 'Morning'}\n${address ? '- *Area / Instructions:* ' + address : ''}\n${notes ? '- *Special Note:* ' + notes : ''}\n\nPlease confirm my appointment.`;
 
       const whatsappUrl = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`;
 
@@ -244,7 +244,7 @@
 
       setTimeout(() => {
         window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
-      }, 1200);
+      }, 1000);
     });
   }
 
@@ -513,8 +513,8 @@
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
               </span>
               <div>
-                <span class="text-xs font-bold text-teal-900 block">Home Collection & Digital Report</span>
-                <span class="text-[11px] text-slate-500 font-medium">Free doorstep sample collection in Silvassa</span>
+                <span class="text-xs font-bold text-teal-900 block">Verified Digital Pathology</span>
+                <span class="text-[11px] text-slate-500 font-medium">Detailed parameter reports delivered directly on WhatsApp</span>
               </div>
             </div>
             <span class="text-xs font-bold text-teal-700 bg-white px-2.5 py-1 rounded-lg border border-teal-200 shrink-0">Available</span>
