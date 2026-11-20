@@ -11,7 +11,6 @@ window.AVEXA_TESTS = [
     sample: "Whole Blood (EDTA)",
     fasting: "Not Required",
     tat: "Same Day (4 Hours)",
-    price: 350,
     popular: true,
     description: "Evaluates red blood cells, white blood cells, platelets, hemoglobin, hematocrit and infection markers (ESR). Essential for screening anemia, infections, leukemia and general wellness.",
     parameters: ["Hemoglobin", "RBC Count", "WBC Total Count", "Differential Count (5-part)", "Platelet Count", "PCV/Hematocrit", "MCV, MCH, MCHC", "RDW-CV", "ESR (Westergren)"]
@@ -23,7 +22,6 @@ window.AVEXA_TESTS = [
     sample: "Fluoride Plasma",
     fasting: "8 - 10 Hours Strict Fasting",
     tat: "Same Day (2 Hours)",
-    price: 100,
     popular: true,
     description: "Measures blood glucose concentration after an overnight fast. Primary screening test for prediabetes and diabetes mellitus.",
     parameters: ["Fasting Plasma Glucose"]
@@ -35,7 +33,6 @@ window.AVEXA_TESTS = [
     sample: "Fluoride Plasma",
     fasting: "Exactly 2 Hours after Meal",
     tat: "Same Day (2 Hours)",
-    price: 100,
     popular: true,
     description: "Assesses body's insulin response and glucose clearance after carbohydrate intake.",
     parameters: ["Post-Prandial Plasma Glucose"]
@@ -47,7 +44,6 @@ window.AVEXA_TESTS = [
     sample: "Whole Blood (EDTA)",
     fasting: "Not Required",
     tat: "Same Day (4 Hours)",
-    price: 450,
     popular: true,
     description: "Reflects average blood glucose levels over the past 2 to 3 months. Gold standard for long-term diabetes monitoring and glycemic control.",
     parameters: ["HbA1c Percentage", "Estimated Average Glucose (eAG)"]
@@ -59,7 +55,6 @@ window.AVEXA_TESTS = [
     sample: "Serum",
     fasting: "10 - 12 Hours Fasting",
     tat: "Same Day (5 Hours)",
-    price: 650,
     popular: true,
     description: "Comprehensive cardiovascular risk assessment evaluating bad cholesterol (LDL), good cholesterol (HDL), triglycerides, and atherogenic ratios.",
     parameters: ["Total Cholesterol", "HDL Cholesterol (Good)", "LDL Cholesterol (Bad)", "VLDL Cholesterol", "Triglycerides", "Total Chol/HDL Ratio", "LDL/HDL Ratio"]
@@ -71,7 +66,6 @@ window.AVEXA_TESTS = [
     sample: "Serum",
     fasting: "8 Hours Fasting Recommended",
     tat: "Same Day (5 Hours)",
-    price: 700,
     popular: true,
     description: "Evaluates liver health, bile duct function, protein synthesis, and detects hepatic inflammation or jaundice.",
     parameters: ["Bilirubin Total", "Bilirubin Direct & Indirect", "SGOT / AST", "SGPT / ALT", "Alkaline Phosphatase (ALP)", "Total Protein", "Albumin", "Globulin", "A:G Ratio", "GGTP"]
@@ -83,7 +77,6 @@ window.AVEXA_TESTS = [
     sample: "Serum",
     fasting: "Not Required (Water intake normal)",
     tat: "Same Day (5 Hours)",
-    price: 750,
     popular: true,
     description: "Checks renal filtration efficiency, waste clearance, electrolyte balance, and screens for chronic kidney disease.",
     parameters: ["Blood Urea", "BUN (Blood Urea Nitrogen)", "Serum Creatinine", "Serum Uric Acid", "Serum Calcium", "Sodium (Na+)", "Potassium (K+)", "Chloride (Cl-)", "eGFR"]
@@ -95,7 +88,6 @@ window.AVEXA_TESTS = [
     sample: "Serum",
     fasting: "Morning sample preferred",
     tat: "Same Day (6 Hours)",
-    price: 500,
     popular: true,
     description: "Chemiluminescent assay assessing thyroid gland functioning for hypothyroidism, hyperthyroidism, weight fluctuations, and fatigue.",
     parameters: ["Total Triiodothyronine (T3)", "Total Thyroxine (T4)", "Thyroid Stimulating Hormone (TSH)"]
@@ -107,7 +99,6 @@ window.AVEXA_TESTS = [
     sample: "Serum",
     fasting: "Morning sample preferred",
     tat: "Same Day (6 Hours)",
-    price: 750,
     popular: false,
     description: "Measures biologically active unbound thyroid hormones, crucial for pregnant women and patients on thyroid medications.",
     parameters: ["Free T3", "Free T4", "Ultrasensitive TSH 3rd Gen"]
@@ -119,7 +110,6 @@ window.AVEXA_TESTS = [
     sample: "Serum",
     fasting: "Not Required",
     tat: "Same Day (6 Hours)",
-    price: 900,
     popular: true,
     description: "Measures active circulating Vitamin D essential for bone density, calcium absorption, muscle recovery, and immune competence.",
     parameters: ["25-OH Vitamin D Total"]
@@ -131,7 +121,6 @@ window.AVEXA_TESTS = [
     sample: "Serum",
     fasting: "10 Hours Fasting Recommended",
     tat: "Same Day (6 Hours)",
-    price: 800,
     popular: true,
     description: "Essential for nerve health, brain function, and red blood cell production. Common deficiency among vegetarian populations in India.",
     parameters: ["Vitamin B12 Level"]
@@ -143,7 +132,6 @@ window.AVEXA_TESTS = [
     sample: "Clean-catch Midstream Urine",
     fasting: "First Morning Urine Preferred",
     tat: "Same Day (2 Hours)",
-    price: 150,
     popular: true,
     description: "Screens for urinary tract infections (UTI), kidney disease, proteinuria, glucosuria, presence of crystals, pus cells, and microscopic hematuria.",
     parameters: ["Color & Transparency", "pH & Specific Gravity", "Urine Protein / Albumin", "Urine Sugar", "Pus Cells / Leucocytes", "RBCs", "Epithelial Cells", "Casts & Crystals"]
@@ -155,7 +143,6 @@ window.AVEXA_TESTS = [
     sample: "Serum / Whole Blood",
     fasting: "Not Required",
     tat: "Same Day (2 Hours)",
-    price: 950,
     popular: true,
     description: "Early detection of Dengue viral infection from Day 1 of fever (NS1) as well as subacute immune response (IgM/IgG antibodies).",
     parameters: ["Dengue NS1 Antigen", "Dengue IgM Antibody", "Dengue IgG Antibody"]
@@ -167,7 +154,6 @@ window.AVEXA_TESTS = [
     sample: "Serum",
     fasting: "Not Required",
     tat: "Same Day (4 Hours)",
-    price: 450,
     popular: false,
     description: "High-sensitivity marker indicating systemic inflammation, acute bacterial/viral infections, and long-term cardiac inflammation risk.",
     parameters: ["High-Sensitivity CRP Level"]
@@ -179,7 +165,6 @@ window.AVEXA_TESTS = [
     sample: "Serum",
     fasting: "12 Hours Fasting Required",
     tat: "Same Day (6 Hours)",
-    price: 1100,
     popular: false,
     description: "Comprehensive evaluation of iron stores, binding capacity, and ferritin reserves. Essential for diagnosing stubborn anemia.",
     parameters: ["Serum Iron", "Total Iron Binding Capacity (TIBC)", "UIBC", "% Transferrin Saturation", "Serum Ferritin"]
@@ -191,7 +176,6 @@ window.AVEXA_TESTS = [
     sample: "Physiological Recording",
     fasting: "Not Required",
     tat: "Immediate (15 Minutes)",
-    price: 300,
     popular: true,
     description: "High-precision digital recording of cardiac electrical rhythms to diagnose arrhythmias, ischemia, heart strain, or acute infarction.",
     parameters: ["Heart Rate", "PR Interval", "QRS Duration", "QT/QTc", "Rhythm Analysis", "Ischemic ST-T Changes"]
@@ -203,7 +187,6 @@ window.AVEXA_TESTS = [
     sample: "Blood, Urine & Physical",
     fasting: "10 Hours Fasting",
     tat: "24 Hours (Full Certificate)",
-    price: 850,
     popular: true,
     description: "Certified fitness evaluation for factory employees and corporate personnel compliant with Gujarat & DNH Industrial Factories Act.",
     parameters: ["CBC with ESR", "Blood Group & Rh", "Urine Routine", "Fasting Blood Sugar", "Physical Vitals & BMI", "Color Vision (Ishihara)", "Medical Fitness Certificate"]
@@ -215,7 +198,6 @@ window.AVEXA_TESTS = [
     sample: "Multimodal Screen",
     fasting: "Fasting Preferred",
     tat: "24-48 Hours",
-    price: 1250,
     popular: true,
     description: "Mandatory statutory occupational health checkup including lung function test (Spirometry) and Pure Tone Audiometry for noise-exposed workers.",
     parameters: ["CBC + Hemogram", "Blood Sugar", "Urine R/M", "Digital ECG", "Pure Tone Audiometry", "Spirometry (Lung Capacity)", "Eye & Vision Testing", "Doctor Physical Fitness Form"]
