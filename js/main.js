@@ -253,32 +253,32 @@
      -------------------------------------------------------------------------- */
   function initContactForm() {
     const form = document.getElementById('contactEnquiryForm');
-    if (!form) return;
+    const waBtn = document.getElementById('contactWhatsappBtn');
+    if (!form && !waBtn) return;
 
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const formData = new FormData(form);
-      const name = formData.get('fullName');
-      const phone = formData.get('phone');
-      const email = formData.get('email') || 'N/A';
-      const service = formData.get('service') || 'General Enquiry';
-      const messageText = formData.get('message') || '';
+    if (waBtn && form) {
+      waBtn.addEventListener('click', (e) => {
+        const nameInput = form.querySelector('input[name="fullName"]');
+        const phoneInput = form.querySelector('input[name="phone"]');
+        const messageInput = form.querySelector('textarea[name="message"]');
+        const serviceSelect = form.querySelector('select[name="service"]');
 
-      if (!name || !phone) {
-        showToast('Please provide your name and phone number.', 'error');
-        return;
-      }
+        const name = nameInput ? nameInput.value.trim() : '';
+        const phone = phoneInput ? phoneInput.value.trim() : '';
+        const msg = messageInput ? messageInput.value.trim() : '';
+        const service = serviceSelect ? serviceSelect.value : '';
 
-      const waMsg = `Hello Avexa Healthcare,\n\nNew Patient Enquiry from Website:\n- *Name:* ${name}\n- *Phone:* ${phone}\n- *Email:* ${email}\n- *Service Interested:* ${service}\n- *Message:* ${messageText || 'Kindly share more details'}`;
-      const whatsappUrl = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(waMsg)}`;
-
-      showToast('Thank you! Your inquiry has been submitted. Connecting you with our medical team...', 'success');
-      form.reset();
-
-      setTimeout(() => {
-        window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
-      }, 1000);
-    });
+        if (name || phone || msg) {
+          e.preventDefault();
+          let text = `Hello Avexa Healthcare, I have an enquiry from the website:`;
+          if (name) text += `\n- Name: ${name}`;
+          if (phone) text += `\n- Phone: ${phone}`;
+          if (service) text += `\n- Service Interested: ${service}`;
+          if (msg) text += `\n- Prescription / Details: ${msg}`;
+          window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+        }
+      });
+    }
   }
 
   /* --------------------------------------------------------------------------
