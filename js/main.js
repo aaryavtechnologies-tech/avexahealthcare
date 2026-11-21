@@ -89,7 +89,7 @@
     document.querySelectorAll('.nav-link').forEach(link => {
       const href = link.getAttribute('href');
       if (href === pageName || (pageName === '' && href === 'index.html') || (href === './' && pageName === 'index.html')) {
-        link.classList.add('text-teal-600', 'font-bold');
+        link.classList.add('text-navy-950', 'font-bold');
         link.classList.remove('text-slate-700');
         const indicator = link.querySelector('.nav-indicator');
         if (indicator) indicator.classList.remove('opacity-0');
@@ -111,10 +111,10 @@
         const targetId = btn.getAttribute('data-tab-target');
 
         tabButtons.forEach(b => {
-          b.classList.remove('active', 'bg-teal-600', 'text-white', 'shadow-md');
+          b.classList.remove('active', 'bg-navy-900', 'text-white', 'shadow-md');
           b.classList.add('text-slate-600', 'hover:bg-slate-100');
         });
-        btn.classList.add('active', 'bg-teal-600', 'text-white', 'shadow-md');
+        btn.classList.add('active', 'bg-navy-900', 'text-white', 'shadow-md');
         btn.classList.remove('text-slate-600', 'hover:bg-slate-100');
 
         tabPanes.forEach(pane => {
@@ -378,12 +378,12 @@
       if (filtered.length === 0) {
         container.innerHTML = `
           <div class="col-span-full text-center py-12 px-4 bg-white rounded-3xl border border-dashed border-slate-300">
-            <div class="w-16 h-16 mx-auto mb-4 bg-teal-50 text-teal-600 rounded-full flex items-center justify-center">
+            <div class="w-16 h-16 mx-auto mb-4 bg-navy-50 text-navy-900 rounded-full flex items-center justify-center">
               <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
             </div>
             <h3 class="text-lg font-bold text-slate-800 mb-1">No matching test found</h3>
             <p class="text-slate-500 max-w-md mx-auto text-sm mb-4">Avexa conducts over 500+ specialized tests. If your doctor prescribed an uncommon test, message our laboratory desk directly.</p>
-            <a href="https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent('Hi Avexa Healthcare, I am searching for a test: ' + searchQuery)}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-2.5 bg-teal-600 hover:bg-teal-700 text-white rounded-xl font-bold text-sm transition">
+            <a href="https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent('Hi Avexa Healthcare, I am searching for a test: ' + searchQuery)}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-2.5 bg-navy-900 hover:bg-navy-800 text-white rounded-xl font-bold text-sm transition shadow-md">
               Inquire via WhatsApp
             </a>
           </div>
@@ -401,7 +401,7 @@
           <div class="card-elevation rounded-3xl p-6 sm:p-7 flex flex-col justify-between group relative overflow-hidden">
             <div>
               <div class="flex items-center justify-between gap-2 mb-3">
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-teal-50 text-teal-700 text-xs font-bold rounded-full border border-teal-100">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-navy-50 text-navy-900 text-xs font-bold rounded-full border border-navy-100">
                   ${test.category}
                 </span>
                 ${test.popular ? `
@@ -411,7 +411,7 @@
                 ` : ''}
               </div>
 
-              <h3 class="text-lg font-extrabold text-navy-900 group-hover:text-teal-700 transition-colors mb-2 leading-snug">
+              <h3 class="text-lg font-extrabold text-navy-950 group-hover:text-navy-700 transition-colors mb-2 leading-snug">
                 ${test.name}
               </h3>
 
@@ -430,7 +430,7 @@
                 </div>
                 <div class="flex items-center justify-between">
                   <span class="text-slate-500 font-medium">Report Delivery:</span>
-                  <span class="font-bold text-teal-700">${test.tat}</span>
+                  <span class="font-bold text-navy-900">${test.tat}</span>
                 </div>
               </div>
             </div>
@@ -439,7 +439,7 @@
               <button type="button" 
                       data-open-modal="homeCollectionModal" 
                       data-prefill-service="${test.name}"
-                      class="flex-1 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-xs font-bold rounded-xl transition shadow-md shadow-teal-600/20 text-center">
+                      class="flex-1 py-2.5 bg-navy-900 hover:bg-navy-800 text-white text-xs font-bold rounded-xl transition shadow-md shadow-navy-900/20 text-center">
                 Book Test
               </button>
               <a href="https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent('Hi Avexa Healthcare, I want to book / inquire about: ' + test.name)}" 
@@ -471,10 +471,10 @@
     categoryButtons.forEach(btn => {
       btn.addEventListener('click', () => {
         categoryButtons.forEach(b => {
-          b.classList.remove('bg-teal-600', 'text-white');
+          b.classList.remove('bg-navy-900', 'text-white');
           b.classList.add('bg-white', 'text-slate-700', 'border-slate-200');
         });
-        btn.classList.add('bg-teal-600', 'text-white');
+        btn.classList.add('bg-navy-900', 'text-white');
         btn.classList.remove('bg-white', 'text-slate-700', 'border-slate-200');
         activeCategory = btn.getAttribute('data-category');
         renderTests();
@@ -492,32 +492,32 @@
     container.innerHTML = window.AVEXA_PACKAGES.map(pkg => `
       <div class="card-elevation rounded-3xl p-7 sm:p-8 flex flex-col justify-between relative group overflow-hidden">
         ${pkg.badge ? `
-          <div class="absolute top-0 right-0 bg-teal-600 text-white text-[11px] font-extrabold px-4 py-1.5 rounded-bl-2xl uppercase tracking-wider shadow-sm">
+          <div class="absolute top-0 right-0 bg-navy-900 text-white text-[11px] font-extrabold px-4 py-1.5 rounded-bl-2xl uppercase tracking-wider shadow-sm">
             ${pkg.badge}
           </div>
         ` : ''}
 
         <div>
           <div class="mb-4">
-            <span class="text-xs font-bold text-teal-700 bg-teal-50 px-3 py-1 rounded-full border border-teal-100">
+            <span class="text-xs font-bold text-navy-900 bg-navy-50 px-3 py-1 rounded-full border border-navy-100">
               ${pkg.parametersCount} Parameters Included
             </span>
           </div>
 
-          <h3 class="text-xl font-extrabold text-navy-900 mb-2 leading-tight">${pkg.name}</h3>
+          <h3 class="text-xl font-extrabold text-navy-950 mb-2 leading-tight">${pkg.name}</h3>
           <p class="text-slate-600 text-xs sm:text-sm mb-6 leading-relaxed">${pkg.description}</p>
 
-          <div class="bg-teal-50/80 rounded-2xl p-4 mb-6 border border-teal-100 flex items-center justify-between">
+          <div class="bg-navy-50/80 rounded-2xl p-4 mb-6 border border-navy-100 flex items-center justify-between">
             <div class="flex items-center gap-2.5">
-              <span class="w-8 h-8 rounded-xl bg-teal-600 text-white flex items-center justify-center shrink-0">
+              <span class="w-8 h-8 rounded-xl bg-navy-900 text-white flex items-center justify-center shrink-0">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
               </span>
               <div>
-                <span class="text-xs font-bold text-teal-900 block">Verified Digital Pathology</span>
+                <span class="text-xs font-bold text-navy-950 block">Verified Digital Pathology</span>
                 <span class="text-[11px] text-slate-500 font-medium">Detailed parameter reports delivered directly on WhatsApp</span>
               </div>
             </div>
-            <span class="text-xs font-bold text-teal-700 bg-white px-2.5 py-1 rounded-lg border border-teal-200 shrink-0">Available</span>
+            <span class="text-xs font-bold text-navy-900 bg-white px-2.5 py-1 rounded-lg border border-navy-200 shrink-0">Available</span>
           </div>
 
           <div class="space-y-2 mb-6">
@@ -525,7 +525,7 @@
             <ul class="space-y-2 text-xs text-slate-700">
               ${pkg.categories.map(item => `
                 <li class="flex items-start gap-2">
-                  <svg class="w-4 h-4 text-teal-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                  <svg class="w-4 h-4 text-navy-800 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
                   <span>${item}</span>
                 </li>
               `).join('')}
@@ -537,7 +537,7 @@
           <button type="button" 
                   data-open-modal="homeCollectionModal" 
                   data-prefill-service="${pkg.name}"
-                  class="w-full py-3 bg-teal-600 hover:bg-teal-700 text-white rounded-xl font-bold text-sm transition text-center shadow-md shadow-teal-600/20">
+                  class="w-full py-3 bg-navy-900 hover:bg-navy-800 text-white rounded-xl font-bold text-sm transition text-center shadow-md shadow-navy-900/20">
             Book Package
           </button>
           <a href="https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent('Hi Avexa Healthcare, I am interested in inquiring about the ' + pkg.name + ' package.')}" 
@@ -572,10 +572,10 @@
         const filter = btn.getAttribute('data-gallery-filter');
 
         filterButtons.forEach(b => {
-          b.classList.remove('bg-teal-600', 'text-white');
+          b.classList.remove('bg-navy-900', 'text-white');
           b.classList.add('bg-white', 'text-slate-700');
         });
-        btn.classList.add('bg-teal-600', 'text-white');
+        btn.classList.add('bg-navy-900', 'text-white');
         btn.classList.remove('bg-white', 'text-slate-700');
 
         galleryItems.forEach(item => {
@@ -674,9 +674,9 @@
     }
 
     if (type === 'success') {
-      toast.className = 'fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-3 px-6 py-3.5 rounded-2xl text-sm font-bold shadow-2xl transition-all duration-300 transform translate-y-0 opacity-100 bg-navy-950 text-white border border-teal-500/50 pointer-events-auto';
+      toast.className = 'fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-3 px-6 py-3.5 rounded-2xl text-sm font-bold shadow-2xl transition-all duration-300 transform translate-y-0 opacity-100 bg-navy-950 text-white border border-navy-700 pointer-events-auto';
       toast.innerHTML = `
-        <svg class="w-5 h-5 text-teal-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+        <svg class="w-5 h-5 text-white shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
         <span>${message}</span>
       `;
     } else if (type === 'error') {
