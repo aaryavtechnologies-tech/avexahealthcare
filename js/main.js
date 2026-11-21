@@ -592,7 +592,7 @@
     galleryItems.forEach(item => {
       item.addEventListener('click', () => {
         if (!lightboxDialog || !lightboxImg) return;
-        const img = item.querySelector('img');
+        const img = item.querySelector('.gallery-main-img') || item.querySelector('img');
         const title = item.querySelector('h3, .gallery-item-title')?.textContent || 'Avexa Diagnostic Facility';
         const caption = item.querySelector('p, .gallery-item-caption')?.textContent || 'Tokarkhada, Silvassa';
 
