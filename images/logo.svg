@@ -2,37 +2,37 @@
   <defs>
     <linearGradient id="avexaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="100%" stop-color="#93C5FD"/>
+      <stop offset="100%" stop-color="#D4EAC0"/>
     </linearGradient>
     <linearGradient id="shieldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0A1E35"/>
-      <stop offset="100%" stop-color="#0F2B48"/>
+      <stop offset="0%" stop-color="#0E2C48"/>
+      <stop offset="100%" stop-color="#153D61"/>
     </linearGradient>
   </defs>
 
-  <!-- Brand Symbol / Emblem -->
+  <!-- Brand Symbol / Emblem in Reference Doctor Prussian Blue & Mint Accent -->
   <g transform="translate(10, 10)">
-    <!-- Protective Rounded Hexagon / Shield in Navy Blue -->
+    <!-- Protective Rounded Hexagon / Shield -->
     <rect x="2" y="2" width="56" height="56" rx="16" fill="url(#shieldGradient)" />
     
     <!-- Medical Plus in Pure Crisp White -->
     <path d="M30 14V46M14 30H46" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round"/>
     
-    <!-- Dynamic Pulse Wave in Crisp White -->
+    <!-- Dynamic Pulse Wave -->
     <path d="M19 30L25 30L28 22L32 38L35 27L38 30L41 30" stroke="url(#avexaGradient)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
     
-    <!-- Small Precision Dot -->
-    <circle cx="43" cy="17" r="3.5" fill="#FFFFFF"/>
+    <!-- Precision Accent Dot in Doctor Mint/Sage (#94C973) -->
+    <circle cx="43" cy="17" r="3.5" fill="#94C973"/>
   </g>
 
-  <!-- Typography: Deep Navy Blue & Crisp Contrast -->
-  <text x="80" y="38" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="800" font-size="28" fill="#0A1E35" letter-spacing="-0.5">
+  <!-- Typography: Doctor Prussian Blue & Mint Accent -->
+  <text x="80" y="38" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="800" font-size="28" fill="#153D61" letter-spacing="-0.5">
     AVEXA
   </text>
-  <text x="178" y="38" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="700" font-size="16" fill="#0F2B48" letter-spacing="1">
+  <text x="178" y="38" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="700" font-size="16" fill="#94C973" letter-spacing="1">
     HEALTHCARE
   </text>
-  <text x="80" y="56" font-family="'Inter', system-ui, sans-serif" font-weight="600" font-size="11" fill="#475569" letter-spacing="2.2">
+  <text x="80" y="56" font-family="'Inter', system-ui, sans-serif" font-weight="600" font-size="11" fill="#64748B" letter-spacing="2.2">
     &amp; PATH LABS • SILVASSA
   </text>
 </svg>

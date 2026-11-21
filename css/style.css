@@ -1,7 +1,12 @@
 /* ==========================================================================
    Avexa Healthcare & Path Labs - Master Styling Sheet
    Ultra-High-End Medical Diagnostics UI & Design System
-   Color Palette: Pure White, Navy Blue & Primary White
+   Exact Color Palette from Reference:
+   - Primary Deep Prussian Blue: #153D61
+   - Dark Contrast Blue: #0E2C48
+   - Medical Mint / Sage Accent: #94C973
+   - Soft Ice/Mint Pastel Hero: #D8EDF0 / #EAF5F8
+   - Pure Crisp White: #FFFFFF
    Tokarkhada, Silvassa
    Development by Aaryav Technologies
    ========================================================================== */
@@ -9,14 +14,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --color-navy: #0A1E35;
-  --color-navy-dark: #061324;
-  --color-navy-surface: #0F2B48;
-  --color-navy-primary: #0A1E35;
-  --color-navy-light: #163C65;
-  --color-navy-subtle: #F0F5FA;
-  --color-blue-accent: #1D4ED8;
-  --color-charcoal: #0A1E35;
+  --color-prussian: #153D61;
+  --color-prussian-dark: #0E2C48;
+  --color-prussian-light: #1D5080;
+  --color-sage: #94C973;
+  --color-sage-light: #D4EAC0;
+  --color-sage-subtle: #F2F8ED;
+  --color-navy: #153D61;
+  --color-navy-dark: #0E2C48;
+  --color-navy-surface: #1E4B75;
+  --color-navy-primary: #153D61;
+  --color-navy-light: #1D5080;
+  --color-navy-subtle: #EAF5F8;
+  --color-charcoal: #153D61;
   --color-body: #334155;
   --color-surface-card: #FFFFFF;
   --color-surface-muted: #F8FAFC;
@@ -38,6 +48,13 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.025em;
 }
 
+/* Top Accent Stripe matching reference template */
+.top-accent-stripe {
+  height: 4px;
+  background: linear-gradient(90deg, #94C973 0%, #B7E4C7 50%, #94C973 100%);
+  width: 100%;
+}
+
 /* --------------------------------------------------------------------------
    Modern Web Guidance: Native <dialog> Modal Styles
    -------------------------------------------------------------------------- */
@@ -49,11 +66,11 @@ dialog:modal {
   padding: 0;
   max-width: calc(100vw - 2rem);
   max-height: calc(100vh - 2rem);
-  box-shadow: 0 25px 60px -15px rgba(10, 30, 53, 0.35);
+  box-shadow: 0 25px 60px -15px rgba(21, 61, 97, 0.35);
 }
 
 dialog::backdrop {
-  background: rgba(6, 19, 36, 0.72);
+  background: rgba(14, 44, 72, 0.72);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   overflow: hidden;
@@ -82,7 +99,7 @@ dialog[open] {
 }
 
 /* --------------------------------------------------------------------------
-   Header & Navigation Styling (100% Solid & Safe Against Scrolling Overlap)
+   Header & Navigation Styling
    -------------------------------------------------------------------------- */
 .glass-header,
 .glass-nav,
@@ -95,42 +112,45 @@ header {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid #E2E8F0 !important;
-  box-shadow: 0 4px 14px -3px rgba(10, 30, 53, 0.08) !important;
+  box-shadow: 0 4px 14px -3px rgba(21, 61, 97, 0.08) !important;
 }
 
 .card-elevation {
   background: #FFFFFF;
   border: 1px solid #E2E8F0;
-  box-shadow: 0 4px 20px -2px rgba(10, 30, 53, 0.05);
+  box-shadow: 0 4px 20px -2px rgba(21, 61, 97, 0.05);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card-elevation:hover {
   transform: translateY(-4px);
-  border-color: #0A1E35;
-  box-shadow: 0 20px 40px -12px rgba(10, 30, 53, 0.12);
+  border-color: #153D61;
+  box-shadow: 0 20px 40px -12px rgba(21, 61, 97, 0.16);
 }
 
+/* Hero Section Background matching the reference doctor template pastel tint */
 .hero-mesh-bg {
-  background-color: #FFFFFF;
+  background-color: #EAF5F8;
   background-image: 
-    radial-gradient(at 100% 0%, rgba(10, 30, 53, 0.04) 0px, transparent 50%),
-    radial-gradient(at 0% 100%, rgba(30, 58, 138, 0.03) 0px, transparent 50%),
-    radial-gradient(at 50% 50%, rgba(240, 245, 250, 0.7) 0px, transparent 100%);
+    radial-gradient(at 100% 0%, rgba(148, 201, 115, 0.20) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(21, 61, 97, 0.12) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(216, 237, 240, 0.8) 0px, transparent 100%);
 }
 
+.gradient-text-steel,
 .gradient-text-teal,
 .gradient-text-navy {
-  background: linear-gradient(135deg, #0A1E35 0%, #0F2B48 50%, #1E3A8A 100%);
+  background: linear-gradient(135deg, #153D61 0%, #1D5080 50%, #94C973 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+.badge-glow-steel,
 .badge-glow-teal,
 .badge-glow-navy {
-  background: #F0F5FA;
-  border: 1px solid rgba(10, 30, 53, 0.20);
-  box-shadow: 0 0 16px -2px rgba(10, 30, 53, 0.08);
-  color: #0A1E35;
+  background: #EAF5F8;
+  border: 1px solid rgba(148, 201, 115, 0.40);
+  box-shadow: 0 0 16px -2px rgba(21, 61, 97, 0.10);
+  color: #153D61;
 }
 
 .badge-glow-amber {
@@ -139,9 +159,7 @@ header {
   box-shadow: 0 0 16px -2px rgba(245, 158, 11, 0.2);
 }
 
-/* --------------------------------------------------------------------------
-   Floating Actions (WhatsApp & Quick Support)
-   -------------------------------------------------------------------------- */
+/* Floating Actions */
 .floating-actions {
   position: fixed;
   bottom: 24px;
@@ -169,17 +187,15 @@ header {
   box-shadow: 0 16px 35px rgba(37, 211, 102, 0.55);
 }
 
-/* --------------------------------------------------------------------------
-   Tab & Interactive Controls (Navy Blue Active States)
-   -------------------------------------------------------------------------- */
+/* Tabs & Interactive Controls */
 .hub-tab-btn {
   transition: all 0.25s ease;
   position: relative;
 }
 .hub-tab-btn.active {
-  background-color: #0A1E35 !important;
+  background-color: #153D61 !important;
   color: #FFFFFF !important;
-  box-shadow: 0 4px 14px rgba(10, 30, 53, 0.35) !important;
+  box-shadow: 0 4px 14px rgba(21, 61, 97, 0.35) !important;
 }
 
 .tab-pane {
@@ -195,9 +211,7 @@ header {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* --------------------------------------------------------------------------
-   Specimen Tube Badges
-   -------------------------------------------------------------------------- */
+/* Specimen Tube Badges */
 .tube-edta {
   background: #F3E8FF;
   color: #6B21A8;
@@ -219,9 +233,7 @@ header {
   border: 1px solid #A7F3D0;
 }
 
-/* --------------------------------------------------------------------------
-   FAQ Accordions
-   -------------------------------------------------------------------------- */
+/* FAQ Accordions */
 .faq-header {
   cursor: pointer;
   user-select: none;
@@ -238,9 +250,7 @@ header {
   transform: rotate(180deg);
 }
 
-/* --------------------------------------------------------------------------
-   Gallery Lightbox Styling
-   -------------------------------------------------------------------------- */
+/* Gallery Lightbox */
 .gallery-card {
   cursor: pointer;
   overflow: hidden;
@@ -255,7 +265,7 @@ header {
 .gallery-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(6, 19, 36, 0.9) 0%, rgba(6, 19, 36, 0.3) 50%, transparent 100%);
+  background: linear-gradient(to top, rgba(14, 44, 72, 0.9) 0%, rgba(14, 44, 72, 0.3) 50%, transparent 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
   display: flex;
@@ -267,9 +277,7 @@ header {
   opacity: 1;
 }
 
-/* --------------------------------------------------------------------------
-   Custom Scrollbar & Print
-   -------------------------------------------------------------------------- */
+/* Custom Scrollbar & Print */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
